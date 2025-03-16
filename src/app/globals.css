@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+.heading-font {
+  font-family: var(--font-geist-sans);
+}
+/* .body-font {
+  font-family: var(--font-geist-mono);
+} */
+.body-font {
+  font-family: var(--font-geist-sans);
+}
+/* .normal-font {
+  font-family: Arial, Helvetica, sans-serif;
+}    */
+.normal-font {
+  font-family: var(--font-geist-sans);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* Global CSS (tailwind.config.js) */
+.text-shadow-xl {
+  text-shadow: 5px 5px 16px rgba(0, 0, 0, 0.4);
+}
+.text-shadow-l {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Light gray track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #008080; /* Teal scrollbar */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006666; /* Slightly darker teal on hover */
+}
