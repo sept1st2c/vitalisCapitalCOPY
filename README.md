@@ -35,24 +35,19 @@ Open this file in your preferred code editor.
 Inside `data.tsx`, you'll find an exported object containing the site's content. Example:
 
 ```tsx
-export const websiteData = {
-  heroSection: {
-    title: "Welcome to Vitalis Capital",
-    subtitle: "Your trusted investment partner",
-  },
-  aboutSection: {
-    heading: "About Us",
-    description:
-      "Vitalis Capital is dedicated to providing financial solutions...",
-  },
-  services: [
+export const heroData = {
+  backgroundImage: "/heh2.jpeg",
+  heading: "Accelerating Growth Through Strategic Capital",
+  description:
+    "Empowering groundbreaking companies across diverse sectors, driving innovation and sustainability to support the leaders of tomorrow.",
+  buttons: [
     {
-      title: "Investment Planning",
-      description: "We help you manage your assets effectively.",
+      text: "Get Started",
+      targetId: "portfolio-companies",
     },
     {
-      title: "Wealth Management",
-      description: "Strategies for long-term financial growth.",
+      text: "Learn More",
+      targetId: "investment-principles",
     },
   ],
 };
@@ -63,11 +58,21 @@ To update the content, simply change the text inside the quotes.
 **Example Change:**
 
 ```tsx
-export const websiteData = {
-  heroSection: {
-    title: "Welcome to Our Firm",
-    subtitle: "Empowering your financial future",
-  },
+export const heroData = {
+  backgroundImage: "/heh2.jpeg",
+  heading: "AAAABBBCCC",
+  description:
+    "Empowering groundbreaking companies across diverse sectors, driving innovation and sustainability",
+  buttons: [
+    {
+      text: "Get Started",
+      targetId: "portfolio-companies",
+    },
+    {
+      text: "Learn",
+      targetId: "is",
+    },
+  ],
 };
 ```
 
