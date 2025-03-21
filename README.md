@@ -1,32 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Updating Content for Vitalis Capital Website**
 
-## Getting Started
+This guide explains how to modify the content of the **Vitalis Capital** website by editing the `data.tsx` file.
 
-First, run the development server:
+## **Prerequisites**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Basic knowledge of TypeScript and Next.js
+- A code editor (VS Code recommended)
+- Git installed on your system
+- Access to the GitHub repository
+
+## **Steps to Update the Content**
+
+### **1. Clone the Repository**
+
+If you haven't already, clone the project to your local machine:
+
+```sh
+git clone https://github.com/iamsarthak/vitalis-capital.git
+cd vitalis-capital
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **2. Navigate to the Data File**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All the website content is stored in:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/app/data/data.tsx
+```
 
-## Learn More
+Open this file in your preferred code editor.
 
-To learn more about Next.js, take a look at the following resources:
+### **3. Modify the Content**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Inside `data.tsx`, you'll find an exported object containing the site's content. Example:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```tsx
+export const websiteData = {
+  heroSection: {
+    title: "Welcome to Vitalis Capital",
+    subtitle: "Your trusted investment partner",
+  },
+  aboutSection: {
+    heading: "About Us",
+    description:
+      "Vitalis Capital is dedicated to providing financial solutions...",
+  },
+  services: [
+    {
+      title: "Investment Planning",
+      description: "We help you manage your assets effectively.",
+    },
+    {
+      title: "Wealth Management",
+      description: "Strategies for long-term financial growth.",
+    },
+  ],
+};
+```
 
+To update the content, simply change the text inside the quotes.
 
+**Example Change:**
+
+```tsx
+export const websiteData = {
+  heroSection: {
+    title: "Welcome to Our Firm",
+    subtitle: "Empowering your financial future",
+  },
+};
+```
+
+### **4. Save the File**
+
+After making the necessary changes, save the file.
+
+### **5. Run the Project Locally (Optional)**
+
+To preview the changes locally, run:
+
+```sh
+npm install  # Install dependencies
+npm run dev  # Start the development server
+```
+
+Visit `http://localhost:3000` in your browser to see the updates.
+
+### **6. Push the Changes to GitHub**
+
+If you have access to push changes, commit and push them:
+
+```sh
+git add src/app/data/data.tsx
+git commit -m "Updated website content"
+git push origin main
+```
+
+If you don’t have push access, you can fork the repository, make changes, and create a pull request.
+
+## **Conclusion**
+
+That's it! By following these steps, you can easily update the content of the **Vitalis Capital** website without modifying any core code.
